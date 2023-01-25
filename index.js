@@ -30,11 +30,9 @@ do {
   if (number === null) {
     alert('Жаль, что покидаете нас ...')
     break
-  }
-  if (number > 100) {
+  } else if (number > 100) {
     alert('Ура, Вы угадали!')
-  }
-  if (number <= 100) {
+  } else if (number <= 100) {
     alert('Попробуйте еще раз. У Вас получится!')
   }
 } while (number <= 100)
