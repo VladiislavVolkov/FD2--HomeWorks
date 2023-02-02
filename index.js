@@ -1,38 +1,29 @@
-// Треугольник 
+/* Функция №1 -  _.take
+https://lodash.com/docs/4.17.15#take
+*/
 
-for (let i = '#'; i.length <= 7; i += '#') {
-    console.log(i);
-}
+const array = [1, 2, 3, 4, 5, 6, 7];
+const number = +prompt("Введите количество элементов в новом массиве.");
 
-
-
-// Шахматная доска
-
-let i = '';
-for (let a = 0; a < 8; a++) {
-  for (let b = 0; b < 8; b++) {
-    if ((a + b) % 2 !== 0)
-      i += ' ';
-    else
-      i += '#';
+const take = (arr, num) => {
+  const newArray = [];
+  for (let i = 0; i < num; i++) {
+    if (num < arr.length) {
+      newArray.push(arr[i]);
+    } else {
+      num = arr.length;
+      console.log("Число элементов изменили на количество элементов в исходном массиве!");
+      newArray.push(arr[i]);
+    }
   }
-  i += '\n';
-}
-console.log(i);
+  return newArray;
+};
+
+console.log(take(array, number))
 
 
 
-// Число 100
+/* Функция №2 -  _.remove
+https://lodash.com/docs/4.17.15#remove
+*/
 
-let number
-do {
-  number = prompt('Введите число и узнаете угадали ли Вы его!');
-  if (number === null) {
-    alert('Жаль, что покидаете нас ...')
-    break
-  } else if (number > 100) {
-    alert('Ура, Вы угадали!')
-  } else if (number <= 100) {
-    alert('Попробуйте еще раз. У Вас получится!')
-  }
-} while (number <= 100)
