@@ -33,13 +33,13 @@ const remove = (arr) => {
   let newArray = [];
   let evens = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 !== 0) {    // условие поставил как в примере на lodash
-     newArray.push(arr[i]);
-    } else {
-      evens.push(arr[i]);
-    }
+    callback(arr[i]) ? newArray.push(arr[i]) : evens.push(arr[i]);
   }
-  return console.log(newArray, evens);
-}
+  console.log(newArray, evens)
+};
 
-console.log(remove(array))
+const condition  = (item) => {
+  return item % 2 !== 0;
+};
+
+remove(array, condition)
