@@ -29,7 +29,7 @@ https://lodash.com/docs/4.17.15#remove
 
 const array = [1, 2, 3, 4, 5, 6, 7];
 
-const remove = (arr) => {
+const remove = (arr, callback) => {
   let newArray = [];
   let evens = [];
   for (let i = 0; i < arr.length; i++) {
